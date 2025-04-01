@@ -280,3 +280,39 @@ body {
     font-size: 1.1rem;
   }
 }
+.blog-section {
+  max-width: 1000px;
+  margin: 5rem auto;
+  padding: 2rem 3rem;
+  background: linear-gradient(to bottom right, #f5f7fa, #e4ecf2);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.blog-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #111;
+}
+
+.blog-post {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.blog-post h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.blog-post p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+}
+

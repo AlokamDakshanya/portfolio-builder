@@ -2,39 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- Navbar -->
   <nav class="navbar">
     <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./about.html">About me</a></li>
-      <li><a href="./projects.html">Projects</a></li>
-      <li><a href="./blog.html" class="active">Blog</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
     </ul>
   </nav>
 
   <!-- Blog Section -->
-  <section class="blog-section">
+  <section class="project-section">
     <h2>My Blog</h2>
 
-    <div class="blog-post">
-      <h3>📊 How I Built My Portfolio Website</h3>
-      <p>This blog post explains how I used HTML, CSS, and JavaScript to create my personal portfolio. I’ll walk you through each section, from the layout to deployment on GitHub Pages.</p>
+    <!-- Blog Post 1 -->
+    <div class="project-card">
+      <div class="project-content">
+        <h3>📊 How I Built My Portfolio Website</h3>
+        <p>Creating my personal portfolio website was a rewarding experience where I brought together skills in HTML, CSS, and JavaScript. My goal was to design a clean, professional site that reflects my background in data analytics and tech.</p>
+
+        <p><strong>🔧 Technologies Used:</strong><br>
+        - <strong>HTML & CSS:</strong> Structured the content and styled the layout using clean and responsive design.<br>
+        - <strong>JavaScript:</strong> Handled interactivity and dynamic behavior like active menu highlighting.<br>
+        - <strong>Git & GitHub:</strong> Managed version control and hosted the website using GitHub Pages.<br>
+        - <strong>VS Code:</strong> My development environment of choice, great for writing and managing code.</p>
+
+        <p><strong>🧱 Page Structure:</strong><br>
+        - <strong>Home Page:</strong> Short intro with a call to action.<br>
+        - <strong>About Me:</strong> Highlights my skills, tools, education, and work history.<br>
+        - <strong>Projects:</strong> Each project is presented with a title, short description, and a file access button.<br>
+        - <strong>Blog:</strong> This page! Used to document my journey, share insights, and track growth.</p>
+
+        <p><strong>💡 What I Learned:</strong><br>
+        - Importance of clean UI and consistent layout.<br>
+        - GitHub Pages is an easy and free way to publish your site.<br>
+        - Writing modular HTML/CSS makes it easier to manage multiple pages.</p>
+
+        <p><strong>🌐 Deployment:</strong><br>
+        I pushed all my files to a GitHub repo and enabled GitHub Pages under the <code>Settings > Pages</code> tab. The main branch with the root folder served as the source, making my portfolio live and shareable with anyone.</p>
+      </div>
     </div>
-
-    <div class="blog-post">
-      <h3>💡 Data Analytics Projects That Made an Impact</h3>
-      <p>Here’s a look at a few real-world problems I solved using data analytics. From analyzing healthcare expenditure to predicting spam emails, these projects taught me a lot.</p>
-    </div>
-
-    <!-- Add more posts here as needed -->
-
   </section>
-
 </body>
 </html>

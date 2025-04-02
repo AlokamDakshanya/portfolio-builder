@@ -35,6 +35,7 @@ body {
   color: goldenrod;
 }
 
+/* ✅ HOME PAGE HERO SECTION */
 .hero {
   height: 90vh;
   display: flex;
@@ -43,6 +44,9 @@ body {
   text-align: center;
   padding: 2rem;
   animation: fadeIn 1.5s ease-out;
+  background: url('home page background.png') no-repeat center center;
+  background-size: cover;
+  color: #111;
 }
 
 .hero h1 {
@@ -76,6 +80,7 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ✅ ABOUT SECTION */
 .about-container {
   display: flex;
   align-items: flex-start;
@@ -84,7 +89,8 @@ body {
   padding: 3rem 4rem;
   max-width: 1200px;
   margin: 6rem auto 3rem auto;
-  background: linear-gradient(to bottom right, #f5f7fa, #e4ecf2);
+  background: url('aboutpagebackground.png') no-repeat center center;
+  background-size: cover;
   border-radius: 10px;
 }
 
@@ -125,6 +131,7 @@ body {
   margin-top: 1rem;
 }
 
+/* Rest of your CSS: contact, journey, projects, blog remains unchanged */
 .contact-section {
   max-width: 1000px;
   margin: 3rem auto;
@@ -234,85 +241,66 @@ body {
   color: #444;
 }
 
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem;
-    margin-top: 5rem;
-  }
-
-  .about-image {
-    justify-content: center;
-  }
-
-  .about-image img {
-    width: 80%;
-    max-width: 300px;
-    margin-top: 1rem;
-  }
-
-  .about-text {
-    flex: 1;
-    max-width: 700px;
-  }
-
-  .contact-details {
-    align-items: center;
-  }
-
-  .timeline-entry {
-    flex-direction: column;
-  }
-
-  .timeline-date,
-  .timeline-desc {
-    flex: unset;
-    width: 100%;
-  }
-
-  .project-card {
-    padding: 1.5rem;
-    text-align: center;
-  }
-
-  .project-content h3 {
-    font-size: 1.1rem;
-  }
-}
 .blog-section {
-  max-width: 1000px;
-  margin: 5rem auto;
-  padding: 2rem 3rem;
-  background: linear-gradient(to bottom right, #f5f7fa, #e4ecf2);
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  max-width: 960px;
+  margin: 6rem auto;
+  padding: 2.5rem 3rem;
+  background: #f4f6f8;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  font-family: 'Georgia', serif;
+  color: #222;
 }
 
 .blog-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  font-weight: bold;
   text-align: center;
-  color: #111;
+  margin-bottom: 2.5rem;
+  color: #000;
 }
 
 .blog-post {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
 }
 
 .blog-post h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #222;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.blog-post h4 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 1rem;
+  color: #333;
 }
 
 .blog-post p {
   font-size: 1.05rem;
-  color: #444;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
+.blog-post ul {
+  margin: 0.5rem 0 1.5rem 1.5rem;
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+.blog-post ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.blog-post strong {
+  font-weight: bold;
+  color: #000;
+}

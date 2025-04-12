@@ -329,3 +329,24 @@ body {
   font-weight: bold;
   color: #000;
 }
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: black;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #333;
+}

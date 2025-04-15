@@ -35,7 +35,6 @@ body {
   color: goldenrod;
 }
 
-/* ✅ HOME PAGE HERO SECTION */
 .hero {
   height: 90vh;
   display: flex;
@@ -80,7 +79,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ✅ ABOUT SECTION */
 .about-container {
   display: flex;
   align-items: flex-start;
@@ -119,7 +117,8 @@ body {
 .about-image {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-image img {
@@ -238,32 +237,54 @@ body {
   color: #111;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
 .project-card {
-  background: #fff;
-  border-radius: 12px;
+  background: #1e1e2f;
+  color: #f4f4f4;
+  border-radius: 14px;
   padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.07);
-  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.2);
 }
 
 .project-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
-  color: #222;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 .project-content p {
   font-size: 1.05rem;
   line-height: 1.6;
-  margin: 0.4rem 0;
-  color: #444;
+  color: #ccc;
+  margin: 0.5rem 0;
+}
+
+.hero-btn, .resume-btn, .project-card a {
+  background-color: #fff;
+  color: #111;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.hero-btn:hover, .resume-btn:hover, .project-card a:hover {
+  background-color: #ddd;
 }
 
 .blog-section {
@@ -329,6 +350,7 @@ body {
   font-weight: bold;
   color: #000;
 }
+
 .image-wrapper {
   display: flex;
   flex-direction: column;
@@ -349,4 +371,19 @@ body {
 
 .resume-btn:hover {
   background-color: #333;
+}
+.home-hero-btn {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-hero-btn:hover {
+  background-color: black;
+  color: white;
 }

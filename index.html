@@ -87,6 +87,13 @@
       font-size: 1.2rem;
     }
 
+    #typing::after {
+      content: "|";
+      animation: blink 1s infinite;
+      margin-left: 5px;
+      color: #c299ff;
+    }
+
     @keyframes glowPulse {
       0% {
         text-shadow: 0 0 10px #c299ff, 0 0 20px #c299ff;
@@ -96,6 +103,11 @@
         text-shadow: 0 0 5px #c299ff;
         opacity: 0.85;
       }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     @media (max-width: 768px) {
@@ -133,7 +145,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <h1>Welcome to my Portfolio</h1>
-    <p class="hero-subtext">Dakshanya Alokam, Aspiring Data Analyst</p>
+    <p class="hero-subtext"><span id="typing"></span></p>
   </section>
 
   <!-- Vanta Background Scripts -->
@@ -159,6 +171,50 @@
     }
 
     window.addEventListener('DOMContentLoaded', initVanta);
+  </script>
+
+  <!-- Typing Text Animation Script -->
+  <script>
+    const phrases = [
+      "Data Analyst in the Making | SQL & Java Explorer",
+      "Data-Driven. Code-Fueled. Insight-Led."
+    ];
+
+    let i = 0, j = 0, currentPhrase = [], isDeleting = false;
+
+    function loop() {
+      document.getElementById("typing").innerHTML = currentPhrase.join("");
+
+      if (i < phrases.length) {
+        if (!isDeleting && j <= phrases[i].length) {
+          currentPhrase.push(phrases[i][j]);
+          j++;
+        }
+
+        if (isDeleting && j <= phrases[i].length) {
+          currentPhrase.pop();
+          j--;
+        }
+
+        if (j === phrases[i].length) {
+          isDeleting = true;
+        }
+
+        if (isDeleting && j === 0) {
+          currentPhrase = [];
+          isDeleting = false;
+          i++;
+          if (i === phrases.length) i = 0;
+        }
+      }
+
+      const speed = isDeleting ? 50 : 120;
+      const delay = isDeleting && j === 0 ? 500 : isDeleting ? 30 : 200;
+
+      setTimeout(loop, j === phrases[i].length || j === 0 ? delay : speed);
+    }
+
+    loop();
   </script>
 
 </body>

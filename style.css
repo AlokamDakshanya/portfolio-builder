@@ -10,11 +10,12 @@ body {
 .navbar {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
-  background-color: transparent;
-  padding: 2rem 2rem 0;
-  z-index: 10;
+  background-color: #0d0e1a;
+  padding: 1.2rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .navbar ul {
@@ -47,7 +48,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 8rem 2rem 2rem;
   background-color: #0d0e1a;
   color: white;
   flex-direction: column;
@@ -112,6 +113,7 @@ body {
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  margin-top: 2rem;
 }
 
 .about-title {
@@ -384,7 +386,7 @@ body {
   }
 
   .hero {
-    padding-top: 6rem;
+    padding-top: 8rem;
   }
 
   .hero h1.glow-text {

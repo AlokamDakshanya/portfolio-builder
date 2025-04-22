@@ -451,3 +451,168 @@ body {
     transform: translate(-50%, -50%) scale(1.5);
   }
 }
+/* Floating CTA Bubble */
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(145deg, #c299ff, #a366ff);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(194, 153, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 9999;
+  cursor: pointer;
+  animation: pulse-glow 2s infinite;
+}
+
+.floating-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(194, 153, 255, 0.6);
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 12px rgba(194, 153, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(194, 153, 255, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(194, 153, 255, 0.6);
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .floating-cta {
+    padding: 10px 14px;
+    font-size: 14px;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 12px;
+  }
+
+  .floating-cta span {
+    display: none;
+  }
+}
+
+/* Contact Modal */
+.contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 10001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-modal-content {
+  background-color: #111222;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  color: white;
+  box-shadow: 0 0 30px rgba(194, 153, 255, 0.4);
+  animation: slideFadeIn 0.4s ease-out;
+  position: relative;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.contact-modal-content h2 {
+  color: #c299ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-modal-content input,
+.contact-modal-content textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border-radius: 8px;
+  border: none;
+  background-color: #222436;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.contact-modal-content button {
+  background-color: #c299ff;
+  color: #111;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.contact-modal-content button:hover {
+  background-color: #b180f5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ✅ Popup Message Style */
+.popup-message {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1f1f2e;
+  color: #c299ff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(194, 153, 255, 0.3);
+  z-index: 20000;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  animation: fadeSlideIn 0.3s ease-out;
+}
+
+.popup-message.fade-out {
+  opacity: 0;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

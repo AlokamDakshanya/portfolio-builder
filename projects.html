@@ -11,58 +11,77 @@
   <!-- Navbar -->
   <nav class="navbar">
     <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./about.html">About me</a></li>
-      <li><a class="active" href="./projects.html">Projects</a></li>
-      <li><a href="./blog.html">Blog</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a class="active" href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
 
   <!-- Projects Section -->
-  <section class="project-section">
+  <section class="projects-section fade-in">
     <h2>My Projects</h2>
 
-    <!-- Card Grid Container -->
-    <div class="project-grid">
-
-      <div class="project-card">
-        <h3>IPL Facebook Engagement Analysis <span>(Machine Learning & Data Science)</span></h3>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card fade-in">
+        <h3>IPL Facebook Engagement Analysis</h3>
         <ul>
-          <li>Analyzed millions of social media interactions using Python (Random Forest, Gradient Boosting).</li>
-          <li>Developed an ML-based recommendation system, increasing fan engagement by 25%.</li>
+          <li>Analyzed social media data using Python (Random Forest, Gradient Boosting).</li>
+          <li>Increased fan engagement by 25% via ML-based recommendation system.</li>
         </ul>
-        <a href="https://github.com/AlokamDakshanya/IPL-Facebook-Engagement-Analysis" target="_blank" class="hero-btn">Access files</a>
+        <a href="https://github.com/AlokamDakshanya/IPL-Facebook-Engagement-Analysis" target="_blank" class="resume-btn">Access files</a>
       </div>
 
-      <div class="project-card">
-        <h3>Analyzing Medical Expenditure Across U.S. States <span>(Data Analytics & BI)</span></h3>
+      <!-- Project 2 -->
+      <div class="project-card fade-in">
+        <h3>Analyzing Medical Expenditure Across U.S. States</h3>
         <ul>
-          <li>Conducted ETL and trend analysis on 5+ years of U.S. healthcare spending.</li>
-          <li>Built interactive Power BI dashboards, improving stakeholder decision-making in cost optimization.</li>
+          <li>Analyzed 5+ years of healthcare data using Power BI dashboards.</li>
+          <li>Improved decision-making and cost optimization via insights.</li>
         </ul>
-        <a href="#" class="hero-btn">Access files</a>
+        <a href="https://github.com/AlokamDakshanya/US-Medical-Expenditure-Analysis" target="_blank" class="resume-btn">Access files</a>
       </div>
 
-      <div class="project-card">
-        <h3>Spam Email Classification <span>(NLP & AI)</span></h3>
+      <!-- Project 3 -->
+      <div class="project-card fade-in">
+        <h3>Spam Email Classification</h3>
         <ul>
-          <li>Built spam classification models using NLP (TF-IDF, Naïve Bayes, SVM), achieving 97% accuracy.</li>
-          <li>Reduced false positives by 30%, enhancing email security & filtering efficiency.</li>
+          <li>Built NLP spam classifiers (TF-IDF, Naïve Bayes, SVM), achieved 97% accuracy.</li>
+          <li>Reduced false positives by 30%, improving email security.</li>
         </ul>
-        <a href="https://github.com/AlokamDakshanya/Spam-Analysis" target="_blank" class="hero-btn">Access files</a>
+        <a href="https://github.com/AlokamDakshanya/Spam-Analysis" target="_blank" class="resume-btn">Access files</a>
       </div>
 
-      <div class="project-card">
-        <h3>Epilepsy Knowledge Hub <span>(Web Development & UX Design)</span></h3>
+      <!-- Project 4 -->
+      <div class="project-card fade-in">
+        <h3>Epilepsy Knowledge Hub</h3>
         <ul>
-          <li>Designed an interactive web platform for epilepsy awareness using HTML, CSS, and JavaScript.</li>
-          <li>Enhanced UX for accessibility and information clarity using responsive design.</li>
+          <li>Created educational platform using HTML, CSS, JS.</li>
+          <li>Enhanced user experience and accessibility for epilepsy awareness.</li>
         </ul>
-        <a href="#" class="hero-btn">Access files</a>
+        <a href="https://github.com/AlokamDakshanya/Epilepsy-Knowledge-Hub" target="_blank" class="resume-btn">Access files</a>
       </div>
-
     </div>
   </section>
+
+  <!-- Animation Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    faders.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

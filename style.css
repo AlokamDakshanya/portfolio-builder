@@ -13,19 +13,22 @@ body {
   left: 0;
   width: 100%;
   background-color: #0d0e1a;
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .navbar ul {
   display: flex;
+  justify-content: flex-end;
   gap: 2rem;
   list-style: none;
-  justify-content: flex-end;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  margin-right: 2rem; /* <-- added space on right */
 }
+
 
 .navbar li a {
   text-decoration: none;
@@ -110,10 +113,9 @@ body {
 .about-section {
   padding-top: 8rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
-  margin-top: 2rem;
 }
 
 .about-title {
@@ -222,7 +224,7 @@ body {
   transform: scale(1.2);
 }
 
-/* Timeline */
+/* Journey Timeline */
 .journey-section {
   max-width: 1200px;
   margin: 3rem auto;
@@ -329,7 +331,7 @@ body {
   list-style-type: disc;
 }
 
-/* Blog Styling */
+/* Blog Section */
 .blog-section {
   max-width: 900px;
   margin: 8rem auto 4rem auto;
@@ -382,7 +384,8 @@ body {
   .navbar ul {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.2rem;
+    gap: 1rem;
+    padding: 0 1rem;
   }
 
   .hero {

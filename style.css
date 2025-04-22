@@ -3,6 +3,7 @@ body {
   font-family: 'Georgia', serif;
   background-color: #0d0e1a;
   color: #fff;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -39,7 +40,7 @@ body {
   color: #c299ff;
 }
 
-/* Hero Section for Home */
+/* Hero Section */
 .hero {
   height: 100vh;
   display: flex;
@@ -47,10 +48,11 @@ body {
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  animation: fadeIn 1.5s ease-out;
   background-color: #0d0e1a;
   color: white;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1.glow-text {
@@ -58,12 +60,52 @@ body {
   font-weight: bold;
   color: #c299ff;
   margin-bottom: 1rem;
+  animation: glowPulse 2.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px #c299ff, 0 0 20px #c299ff;
 }
 
 .hero-subtext {
   font-size: 1.2rem;
   color: #ddd;
 }
+
+/* Glowing Text Animation */
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px #c299ff, 0 0 20px #c299ff;
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 0 5px #c299ff;
+    opacity: 0.85;
+  }
+}
+
+/* Particles Background */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Fade-in Scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Existing Content Sections Below Remain Unchanged --- */
 
 /* About Section */
 .about-section {
@@ -143,7 +185,6 @@ body {
   align-items: center;
 }
 
-/* Resume Button */
 .resume-btn {
   margin-top: 1.5rem;
   padding: 0.6rem 1.2rem;
@@ -181,7 +222,7 @@ body {
   transform: scale(1.2);
 }
 
-/* Journey Timeline */
+/* Timeline */
 .journey-section {
   max-width: 1200px;
   margin: 3rem auto;
@@ -219,9 +260,7 @@ body {
   font-size: 1.05rem;
 }
 
-/* ===============================
-   PROJECTS GRID CARD STYLING
-   =============================== */
+/* Projects */
 .projects-section {
   max-width: 1300px;
   margin: 0 auto;
@@ -289,9 +328,7 @@ body {
   list-style-type: disc;
 }
 
-/* ===============================
-   BLOG STYLING SECTION
-   =============================== */
+/* Blog Styling */
 .blog-section {
   max-width: 900px;
   margin: 8rem auto 4rem auto;
@@ -321,14 +358,6 @@ body {
   line-height: 1.7;
 }
 
-.blog-section li {
-  margin-bottom: 0.6rem;
-}
-
-.blog-section strong {
-  color: #fff;
-}
-
 .blog-section code {
   background-color: #222436;
   color: #c3c3ff;
@@ -347,25 +376,7 @@ body {
   font-family: 'Courier New', monospace;
 }
 
-/* === Scroll Fade-In Animation === */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar ul {
     justify-content: center;
@@ -390,10 +401,6 @@ body {
     max-width: 250px;
   }
 
-  .contact-icons-inline {
-    font-size: 1.4rem;
-  }
-
   .hero h1.glow-text {
     font-size: 2.2rem;
   }
@@ -402,12 +409,9 @@ body {
     font-size: 1rem;
   }
 
-  .projects-section h2 {
-    font-size: 2.2rem;
-  }
-
+  .projects-section h2,
   .blog-section h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .blog-section h2 {

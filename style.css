@@ -435,3 +435,19 @@ body {
     opacity: 0.95;
   }
 }
+.star-trail {
+  position: fixed;
+  font-size: 12px;
+  color: #c299ff;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: trail-fade 0.8s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes trail-fade {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}

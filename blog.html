@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Blog</title>
+  <title>Blog</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Navigation -->
   <nav class="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -20,52 +20,27 @@
 
   <!-- Blog Section -->
   <section class="blog-section fade-in">
-    <div class="blog-container">
-      <h2 class="blog-title">Building the Website</h2>
+    <h1>My Blog</h1>
 
-      <p><strong>Introduction:</strong> Building a portfolio website is a great way to showcase your projects and build a personal brand. In this blog, I’ll explain how I created a multi-page portfolio site and hosted it using GitHub Pages.</p>
+    <h2>How I Analyze Data</h2>
+    <p>
+      Data analysis is about storytelling with numbers. I begin by understanding the problem, cleaning the dataset, and then using Python and SQL to explore the data. Visualization tools like Power BI or Tableau help me bring insights to life.
+    </p>
 
-      <h3>Planning</h3>
-      <p>My goal was to keep it clean and simple. I designed each page with consistent structure, clear layout, and accessible navigation.</p>
+    <h2>What Excites Me in Tech</h2>
+    <p>
+      I'm fascinated by the intersection of data and decision-making. Automation, predictive modeling, and real-time dashboards are the tools I love working with because they bring instant value to stakeholders.
+    </p>
 
-      <h3>Step 1: Coding the Website</h3>
-      <ul>
-        <li><strong>HTML & CSS:</strong> Used for layout, structure, and responsiveness.</li>
-        <li><strong>JavaScript:</strong> Enabled interactivity and nav highlighting.</li>
-        <li><strong>VS Code:</strong> My go-to editor for writing code efficiently.</li>
-      </ul>
-
-      <h3>Step 2: Project Showcase with Cards</h3>
-      <p>I used grid-based cards on the projects page to display each project with its title, description, and GitHub link. This created a professional and visually appealing layout.</p>
-
-      <h3>Step 3: Hosting with GitHub Pages</h3>
-      <p>
-        I pushed my code to a GitHub repo and enabled GitHub Pages via:
-        <code>Settings &gt; Pages</code> → selected <strong>main</strong> branch as source.
-      </p>
-
-      <h3>Final Thoughts</h3>
-      <p>This experience helped me practice modular design and clean UI building. It also gave me confidence in using GitHub Pages for free, reliable hosting.</p>
-    </div>
+    <h2>Tips for Aspiring Analysts</h2>
+    <ul>
+      <li>Master the basics of Excel, SQL, and Python</li>
+      <li>Focus on business impact, not just code</li>
+      <li>Communicate insights visually and clearly</li>
+    </ul>
   </section>
 
-  <!-- Animation Script -->
-  <script>
-    const elements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    elements.forEach(el => observer.observe(el));
-  </script>
-
+  <!-- Optional: Scroll animation script -->
+  <script src="script.js"></script>
 </body>
 </html>

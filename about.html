@@ -113,17 +113,7 @@
       appearOnScroll.observe(fader);
     });
   </script>
-<script>
-  document.addEventListener("mousemove", (e) => {
-    const star = document.createElement("div");
-    star.className = "star-trail";
-    star.innerHTML = "★";
-    star.style.left = `${e.clientX}px`;
-    star.style.top = `${e.clientY}px`;
-    document.body.appendChild(star);
-    setTimeout(() => star.remove(), 800);
-  });
-</script>
+
 
 </body>
 </html>

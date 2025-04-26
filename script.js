@@ -26,17 +26,6 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// ⭐ Star Trail on Mouse Move
-document.addEventListener("mousemove", (e) => {
-  const star = document.createElement("div");
-  star.className = "star-trail";
-  star.innerHTML = "★";
-  star.style.left = `${e.clientX}px`;
-  star.style.top = `${e.clientY}px`;
-  document.body.appendChild(star);
-  setTimeout(() => star.remove(), 800);
-});
-
 // Floating Contact Modal Logic
 function openContactModal() {
   const modal = document.getElementById("contactModal");
@@ -74,7 +63,7 @@ if (contactForm) {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch("http://localhost:5000/send-email", { 
         method: "POST",
         headers: {
           "Content-Type": "application/json"

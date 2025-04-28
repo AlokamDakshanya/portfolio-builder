@@ -110,121 +110,70 @@ body {
 }
 
 /* About Section */
+/* About Section */
+/* About */
+/* About Section */
 .about-section {
   padding-top: 8rem;
-  max-width: 1200px;
-  margin: 2rem auto 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding-bottom: 1rem; /* Reduce bottom padding */
+  text-align: left;
 }
 
 .about-title {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: #d1aaff;
-  margin-bottom: 2.5rem;
-}
-
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  align-items: flex-start;
-  justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
 .about-text {
-  flex: 2;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #eee;
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #ddd;
+  margin-bottom: 3rem;
 }
 
 .about-text p {
+  margin-bottom: 0;
+}
+
+/* Skills Section */
+.skills-resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.skills-left {
+  width: 100%;
+}
+
+.skills-left ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skills-left li {
+  margin-bottom: 1rem;
   font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1.2rem;
   color: #ccc;
 }
 
 .skills-heading {
-  color: #c299ff;
-  margin-top: 2rem;
-  font-size: 1.4rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #d1aaff;
+  margin-bottom: 2rem;
 }
 
-.skills-list {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-top: 1rem;
-  color: #ccc;
-}
-
-.skills-list li {
-  margin-bottom: 0.8rem;
-  line-height: 1.6;
-}
-
-/* Image and Resume */
-.about-image {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.about-image img {
-  width: 260px;
-  max-height: 350px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  object-fit: cover;
-}
-
-.image-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.resume-btn {
-  margin-top: 1.5rem;
-  padding: 0.6rem 1.2rem;
-  background-color: black;
-  color: white;
-  font-size: 0.95rem;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  border: none;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-}
-
-.resume-btn:hover {
-  background-color: #222;
-}
-
-/* Contact Icons */
-.contact-icons-inline {
-  margin-top: 1.2rem;
-  display: flex;
-  gap: 1.5rem;
-  font-size: 1.6rem;
-  justify-content: center;
-}
-
-.contact-icons-inline a {
-  text-decoration: none;
-  color: #c299ff;
-  transition: transform 0.3s ease;
-}
-
-.contact-icons-inline a:hover {
-  transform: scale(1.2);
-}
-
-/* Journey Timeline */
+/* Journey Section */
 .journey-section {
   max-width: 1200px;
   margin: 3rem auto;
@@ -235,6 +184,7 @@ body {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #c299ff;
+  text-align: center;
 }
 
 .timeline {
@@ -261,6 +211,146 @@ body {
   line-height: 1.6;
   font-size: 1.05rem;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skills-left ul {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .hero {
+    padding-top: 8rem;
+  }
+
+  .hero h1.glow-text {
+    font-size: 2rem;
+    padding: 0 1rem;
+    line-height: 2.6rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    padding: 0 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+/* ✅ Connect With Me Button */
+.connect-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(145deg, #c299ff, #a366ff);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(194, 153, 255, 0.5);
+  transition: background 0.3s, transform 0.3s;
+  z-index: 10000;
+}
+
+.connect-btn:hover {
+  background: linear-gradient(145deg, #a366ff, #c299ff);
+  transform: scale(1.05);
+}
+
+/* ✅ Popup Background */
+#popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#popupOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ✅ Popup Box */
+.connect-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: #111222;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(194, 153, 255, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+}
+
+.connect-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ✅ Popup Links Horizontal */
+.popup-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.popup-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #c299ff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* ✨ Smooth Hover Effects */
+.popup-links a:hover {
+  color: #d1aaff;
+  transform: scale(1.2) rotate(2deg);
+}
+
+/* ✨ Special Bounce for First Link (Download Resume) */
+.popup-links a:first-child:hover {
+  animation: bounce 0.6s;
+}
+
+/* ✨ Bounce Keyframes */
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1.2) translateY(0);
+  }
+  50% {
+    transform: scale(1.25) translateY(-6px);
+  }
+}
+
+
+/* Projects, Blog, Contact Modal, Popup and others remain same */
+
+
+/* Floating CTA */
+/* (Your floating CTA, popup, contact modal styles continue exactly as before) */
+
 
 /* Projects */
 .projects-section {
@@ -330,6 +420,29 @@ body {
   font-size: 0.95rem;
   list-style-type: disc;
 }
+
+/* ✅ Access Files Button Styling */
+.project-access-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 8px 16px;
+  background-color: #c299ff;
+  color: #0d0e1a;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-access-btn:hover {
+  background-color: #a366ff;
+  transform: scale(1.05);
+  color: white;
+}
+
 
 /* Blog Section */
 .blog-section {

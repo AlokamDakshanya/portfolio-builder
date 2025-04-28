@@ -8,80 +8,80 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About me</a></li>
-      <li><a class="active" href="projects.html">Projects</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
-  </nav>
+<!-- Navbar -->
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About me</a></li>
+    <li><a class="active" href="projects.html">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+</nav>
 
-  <!-- Projects Section -->
-  <section class="projects-section fade-in">
-    <h2>My Projects</h2>
+<!-- Projects Section -->
+<section class="projects-section fade-in">
+  <h2>My Projects</h2>
 
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card fade-in">
-        <h3>IPL Facebook Engagement Analysis</h3>
-        <ul>
-          <li>Analyzed social media data using Python (Random Forest, Gradient Boosting).</li>
-          <li>Increased fan engagement by 25% via ML-based recommendation system.</li>
-        </ul>
-        <a href="https://github.com/AlokamDakshanya/IPL-Facebook-Engagement-Analysis" target="_blank" class="resume-btn">Access files</a>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card fade-in">
-        <h3>Analyzing Medical Expenditure Across U.S. States</h3>
-        <ul>
-          <li>Analyzed 5+ years of healthcare data using Power BI dashboards.</li>
-          <li>Improved decision-making and cost optimization via insights.</li>
-        </ul>
-        <a href="https://github.com/AlokamDakshanya/US-Medical-Expenditure-Analysis" target="_blank" class="resume-btn">Access files</a>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card fade-in">
-        <h3>Spam Email Classification</h3>
-        <ul>
-          <li>Built NLP spam classifiers (TF-IDF, Naïve Bayes, SVM), achieved 97% accuracy.</li>
-          <li>Reduced false positives by 30%, improving email security.</li>
-        </ul>
-        <a href="https://github.com/AlokamDakshanya/Spam-Analysis" target="_blank" class="resume-btn">Access files</a>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="project-card fade-in">
-        <h3>Epilepsy Knowledge Hub</h3>
-        <ul>
-          <li>Created educational platform using HTML, CSS, JS.</li>
-          <li>Enhanced user experience and accessibility for epilepsy awareness.</li>
-        </ul>
-        <a href="https://github.com/AlokamDakshanya/Epilepsy-Knowledge-Hub" target="_blank" class="resume-btn">Access files</a>
-      </div>
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card fade-in">
+      <h3>IPL Facebook Engagement Analysis</h3>
+      <ul>
+        <li>Analyzed social media data using Python (Random Forest, Gradient Boosting).</li>
+        <li>Increased fan engagement by 25% via ML-based recommendation system.</li>
+      </ul>
+      <a href="https://github.com/AlokamDakshanya/IPL-Facebook-Engagement-Analysis" target="_blank" class="project-access-btn">Access Files</a>
     </div>
-  </section>
 
-  <!-- Animation Script -->
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
+    <!-- Project 2 -->
+    <div class="project-card fade-in">
+      <h3>Analyzing Medical Expenditure Across U.S. States</h3>
+      <ul>
+        <li>Analyzed 5+ years of healthcare data using Power BI dashboards.</li>
+        <li>Improved decision-making and cost optimization via insights.</li>
+      </ul>
+      <a href="https://github.com/AlokamDakshanya/US-Medical-Expenditure-Analysis" target="_blank" class="project-access-btn">Access Files</a>
+    </div>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
+    <!-- Project 3 -->
+    <div class="project-card fade-in">
+      <h3>Spam Email Classification</h3>
+      <ul>
+        <li>Built NLP spam classifiers (TF-IDF, Naïve Bayes, SVM), achieved 97% accuracy.</li>
+        <li>Reduced false positives by 30%, improving email security.</li>
+      </ul>
+      <a href="https://github.com/AlokamDakshanya/Spam-Analysis" target="_blank" class="project-access-btn">Access Files</a>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card fade-in">
+      <h3>Epilepsy Knowledge Hub</h3>
+      <ul>
+        <li>Created educational platform using HTML, CSS, JS.</li>
+        <li>Enhanced user experience and accessibility for epilepsy awareness.</li>
+      </ul>
+      <a href="https://github.com/AlokamDakshanya/Epilepsy-Knowledge-Hub" target="_blank" class="project-access-btn">Access Files</a>
+    </div>
+  </div>
+</section>
+
+<!-- Animation Script -->
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
+  }, {
+    threshold: 0.1
+  });
 
-    faders.forEach(el => observer.observe(el));
-  </script>
+  faders.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

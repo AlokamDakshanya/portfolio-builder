@@ -103,3 +103,21 @@ function showSuccessPopup(message = "✅ Message sent!") {
   setTimeout(dismiss, 3000);
   setTimeout(() => document.addEventListener("click", dismiss), 0);
 }
+
+// ✅ Connect Button Popup Toggle
+const connectBtn = document.getElementById("connectBtn");
+const popupMenu = document.getElementById("popupMenu");
+
+if (connectBtn && popupMenu) {
+  connectBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    popupMenu.classList.toggle("show");
+  });
+
+  // Close popup if clicking outside
+  window.addEventListener("click", (e) => {
+    if (!popupMenu.contains(e.target) && !connectBtn.contains(e.target)) {
+      popupMenu.classList.remove("show");
+    }
+  });
+}
